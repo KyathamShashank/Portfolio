@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Trebuchet, Helvetica, sans-serif;
+            color: white;
+        }
+
+        body {
+            background-color: #b6b4b4;
+        }
+
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: large;
+            font-family: Trebuchet, Helvetica, sans-serif;
+            transition-duration: 2s;
+            transition: 0.1s;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: large;
+            font-family: Trebuchet, Helvetica, sans-serif;
+            transition-duration: 2s;
+            transition: 0.1s;
+        }
+
+        nav a:hover {
+            background-color: #6E6E6E;
+            color: white;
+        }
+
+        header nav {
+            background-color: #BCFD4C;
+            height: 10vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin: 1vh 1vw;
+            list-style: none;
+        }
+
+        nav h2 {
+            margin-left: 1vw;
+            color: black;
+            transition-duration: 0.2s;
+        }
+
+        .about {
+            background-color: #6E6E6E;
+            height: 80vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 3vh 10vw;
+            border-radius: 5px;
+            border: 1px solid #BCFD4C;
+
+        }
+
+        .about img {
+            height: 250px;
+            border-radius: 6px;
+            margin: 0 2vw;
+            border: 1px solid black;
+            transition-duration: 0.3s;
+        }
+
+        .about img:hover {
+            scale: 1.1;
+        }
+
+        .about p {
+            font-size: 25px;
+            color: white;
+        }
+
+
+        .about h3 {
+            margin: 4vh;
+        }
+
+        .skills {
+            background-color: #6E6E6E;
+            height: 120vh;
+            margin: 1vh 5vw;
+            border-radius: 10px;
+            border: 1px solid #BCFD4C;
+        }
+
+        .skill {
+            border-radius: 10px;
+            padding-top: 6vh;
+            height: 50vh;
+            background-color: #BCFD4C;
+            border: 1px solid black;
+        }
+
+        #skillimg {
+            position: absolute;
+            height: 250px;
+            width: 250px;
+            left: 70vw;
+            top: 100vh;
+        }
+
+        #projectimg {
+            position: absolute;
+            height: 210px;
+            width: 210px;
+            left: 72vw;
+            top: 170vh;
+        }
+
+        .skill span,
+        p {
+            display: inline;
+            margin: 1vw;
+            font-size: larger;
+            color: black;
+        }
+
+        .skill .sk {
+            margin: 5vh;
+        }
+
+        .sk p:hover {
+            color: rgb(65, 49, 49);
+        }
+
+        .skills .projects {
+            color: black;
+            padding-top: 13vh;
+
+        }
+
+        .skills .projects h3 {
+            font-weight: bold;
+            margin-top: 5vh;
+            margin-bottom: 2vh;
+            margin-left: 2vw;
+            color: black;
+            text-decoration: underline;
+        }
+
+        .skills .projects h3:hover {
+            color: white;
+        }
+
+        .skills .projects p:hover {
+            color: white;
+        }
+
+        .skills .projects p {
+            font-weight: lighter;
+        }
+
+        .education {
+            height: 90vh;
+            background-color: #BCFD4C;
+            color: black;
+            margin: 3vh 5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            border: 1px solid #6E6E6E;
+        }
+
+        .education table tr th {
+            color: white;
+            border: 1px solid black;
+            font-size: large;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .education table tr td {
+            color: white;
+            border: 1px solid black;
+            font-size: large;
+            text-align: center;
+        }
+
+        .education table {
+            background-color: #6E6E6E;
+            border: 2px solid black;
+            height: 60vh;
+            width: 80vw;
+            border-radius: 5px;
+        }
+
+        .contact {
+            height: 15vh;
+            width: 100vw;
+            background-color: #6E6E6E;
+            margin: 5vh 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+
+        .contact img {
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in;
+        }
+
+        .contact img:hover {
+            cursor: pointer;
+            height: 60px;
+            width: 60px;
+            margin-left: 1vw;
+            margin-right: 1vw;
+        }
+
+        .call {
+            position: absolute;
+            color: black;
+            height: 10vh;
+            left: 75vw;
+            top: 317vh;
+        }
+
+        .call h4 {
+            margin-top: -1vh;
+        }
+
+        .about h1 {
+            position: absolute;
+            left: 13vw;
+            top: 18vh;
+        }
+
+        .skill h1 {
+            position: absolute;
+            left: 10vw;
+            top: 99vh;
+        }
+
+        .projects h1 {
+            position: absolute;
+            left: 9vw;
+            top: 158vh;
+        }
+
+        .education h1 {
+            position: absolute;
+            left: 9vw;
+            top: 225vh;
+        }
+
+        h1:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+       
+        nav h2:hover {
+            scale: 1.1;
+            cursor: pointer;
+        }
+    </style>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <h2>Shashank Kyatham</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skill">Skills</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#educationn">Education</a></li>
+                <li><a href="#contactt">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="about" id="home">
+        <h1>About Me</h1>
+        <img src="images/shashank_passphoto.jpg" alt="">
+        <div class="info">
+            <p>I completed my Bachelors Degree in BSC(Computer Science).Currently Iam upskilling my web development
+                skills</p><br><br><br>
+            <h3>Kyatham Shashank</h3>
+            <h3> <a href="">Kyathamshashank1723@gmail.com</a></h3>
+            <h3> <a href="">+919398702837</a></h3>
+        </div>
+    </div>
+
+    <div class="skills">
+        <div class="skill" id="skill">
+            <h1>Skills</h1>
+            <div class="sk"><span>Frontend Technologies: </span>
+                <p>HTML, CSS, JavaScript</p><br>
+            </div>
+            <div class="sk"><span>Backend Technologies: </span>
+                <p>JAVA, J2EE, Spring, SpringBoot, MicroServices</p><br>
+            </div>
+            <div class="sk"><span>Database Technologies: </span>
+                <p>Oracle (SQL/PLSQL)</p><br>
+            </div>
+            <div class="sk"><span>Extra Technologies/Skills:</span>
+                <p>Git, MS-Word, MS-PowerPoint</p><br>
+            </div>
+            <img src="images/icons8-programming-96.png" alt="" id="skillimg">
+        </div>
+        <div class="projects" id="project">
+            <h1>Projects</h1>
+            <div class="project1">
+                <h3>SOCIAL MEDIA APP</h3>
+                <p>● Designed a robust social platform with CRUD capabilities including images updates.</p><br>
+                <p> ● Designed with HTML, CSS and JavaScript to ensure a user-friendly interface for managing tasks.</p>
+                <br>
+                <p> ● Dynamic UI updates through DOM operations for seamless CRUD operations. </p><br>
+                <p> ● Secure task persistence through database storage, ensuring that users data is never lost.
+                </p>
+            </div>
+
+            <div class="project2">
+                <h3>NET BANKING APP</h3>
+                <p>● Designed and developed a robust net banking platform for basic CRUD operations .</p><br>
+                <p>● Enhanced user experience with smooth navigation using JavaScript animations and transitions, for
+                    eye-catching UI.</p> <br>
+                <p>● Integrated with JDBC specification for secure login and authentication .</p><br>
+                <p> ● Secure task persistence through database storage, ensuring that users data is never lost.
+                </p>
+            </div>
+            <img src="images/icons8-projects-100.png" alt="" id="projectimg">
+        </div>
+    </div>
+
+    <div class="education" id="educationn">
+        <h1>Education Qualification</h1>
+        <table>
+            <tr>
+                <th>QUALIFICATION</th>
+                <th>SCHOOL/COLLEGE</th>
+                <th> BOARD/UNIVERSITY</th>
+                <th> YEAR OF PASSING</th>
+                <th>PERCENTAGE (%)</th>
+            </tr>
+            <tr>
+                <td>BSC(MPCS)</td>
+                <td>Vivekananda Degree College(Hyderabad)</td>
+                <td>Osmania University</td>
+                <td>2023</td>
+                <td>80.1%</td>
+            </tr>
+            <tr>
+                <td>INTERMEDIATE(MPC)</td>
+                <td>Sree Sandeepani junior College(Kamareddy)</td>
+                <td>Board of Intermediate</td>
+                <td>2020</td>
+                <td>74.7%</td>
+            </tr>
+            <tr>
+                <td>SSC</td>
+                <td>Krishnaveni Talent School(Kamareddy)</td>
+                <td>SSC</td>
+                <td>2018</td>
+                <td>87%</td>
+            </tr>
+            </tr>
+        </table>
+    </div>
+
+    <div class="contact" id="contactt">
+        <div class="insta">
+            <a href="https://www.instagram.com/shashank__23__?igsh=eXFuYjdkbHNzbndt"><img
+                    src="images/icons8-instagram-50.png" alt=""></a>
+        </div>
+        <div class="watsapp">
+            <a href="https://wa.me/qr/V3B6O7MTXCNRK1"><img src="images/icons8-whatsapp-50.png" alt=""></a>
+        </div>
+        <div class="fb">
+            <a href="https://www.facebook.com/shashank.kyatham?mibextid=rS40aB7S9Ucbxw6v"><img
+                    src="images/icons8-fb-50.png" alt=""></a>
+        </div>
+        <div class="linkedin">
+            <a href="https://www.linkedin.com/in/shashank-kyatham/"> <img src="images/icons8-linkedin-50.png"
+                    alt=""></a>
+        </div>
+        <div class="git">
+            <a href="https://github.com/KyathamShashank"><img src="images/icons8-github-50.png" alt=""></a>
+        </div>
+    </div>
+    <div class="call">
+        <h4>Kyatham Shashank</h4><br>
+        <h4>kyathamshashank1723@gmail.com</h4><br>
+        <h4>+919398702837</h4><br>
+    </div>
+</body>
+
+</html>
