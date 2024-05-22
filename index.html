@@ -28,6 +28,7 @@
             transition-duration: 2s;
             transition: 0.1s;
         }
+
         a {
             color: white;
             text-decoration: none;
@@ -276,10 +277,170 @@
             text-decoration: underline;
         }
 
-       
+
         nav h2:hover {
             scale: 1.1;
             cursor: pointer;
+        }
+
+        @media screen and (max-width:300px) {
+
+
+            header nav {
+                width: 115%;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap-reverse;
+
+            }
+
+            nav h2,
+            ul li a {
+                font-size: 10px;
+            }
+
+            .about {
+                height: 50vh;
+                width: 80vw;
+                display: block;
+                font-size: 10px;
+                margin: 2vh 23vw 0;
+            }
+
+            .about img {
+                height: 100px;
+                width: 100px;
+            }
+
+            .info p {
+                font-size: 10px;
+                position: relative;
+                left: 2vw;
+            }
+
+            .about h1 {
+                position: relative;
+                top: -0.5vh;
+            }
+
+            .info h3 {
+                position: relative;
+                top: -8vh;
+                left: -4vw;
+            }
+
+            .info h3 a {
+                font-size: smaller;
+            }
+
+            .skills {
+                width: 80vw;
+                margin: 2vh 23vw 0;
+                height: 220vh;
+               
+            }
+
+            .skill {
+                height: 70vh;
+            }
+
+            .skill h1 {
+                position: relative;
+                top: -6vh;
+                font-size: large;
+            }
+
+            .sk {
+                position: relative;
+                top: 4vh;
+            }
+
+            .sk p {
+                font-size: 15px;
+            }
+
+            .sk span {
+                font-size: 15px;
+            }
+
+            #skillimg {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 25vw;
+                top: 66vh;
+            }
+
+            .projects h1 {
+                position: relative;
+                top: -11vh;
+                font-size: large;
+            }
+
+            #projectimg {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 25vw;
+                top: 146vh;
+            }
+
+            .projects {
+                height: 100vh;
+            }
+
+            .project1 p {
+                font-size: 15px;
+            }
+
+            .project2 p {
+                font-size: 15px;
+            }
+
+            .education {
+                margin-left: 23vw;
+                width: 80vw;
+                height: 50vh;
+            }
+
+            .education h1 {
+                position: absolute;
+                font-size: large;
+                top: 290vh;
+                left: 50vw;
+
+            }
+
+            #tbl {
+                height: 180px;
+                display: block;
+                overflow: scroll;
+                position: absolute;
+                top: 300vh;
+            }
+
+            .education table tr th {
+                font-size: 10px;
+                flex-wrap: wrap;
+            }
+
+            .education table tr td {
+                font-size: 10px;
+            }
+
+            .contact {
+                width: 120vw;
+                margin: 0 4vw 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            .call {
+                position: absolute;
+                top: 360vh;
+                left: 20vw;
+
+            }
         }
     </style>
     <script src="index.js"></script>
@@ -355,7 +516,7 @@
 
     <div class="education" id="educationn">
         <h1>Education Qualification</h1>
-        <table>
+        <table id="tbl">
             <tr>
                 <th>QUALIFICATION</th>
                 <th>SCHOOL/COLLEGE</th>
